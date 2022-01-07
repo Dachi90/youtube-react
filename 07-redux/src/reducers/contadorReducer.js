@@ -3,7 +3,7 @@ import { DECREMENT, DECREMENT_5, INCREMENT, INCREMENT_5, RESET } from "../types"
 const initialState = 0;
 
 export default function contadorReducer(state = initialState, action) {
-  switch (action.TYPE) {
+  switch (action.type) {
     case INCREMENT:
       return state + 1;
     case DECREMENT:
