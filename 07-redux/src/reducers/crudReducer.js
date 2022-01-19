@@ -1,10 +1,10 @@
 import { CREATE_DATA, DELETE_DATA, NO_DATA, READ_ALL_DATA, UPDATE_DATA } from "../types";
 
-export const crudInitialState = {
-  db: null,
+export const initialState = {
+  db: [],
 };
 
-export function crudReducer(state, action) {
+export function crudReducer(state = initialState, action) {
   switch (action.type) {
     case READ_ALL_DATA: {
       //console.log(action.payload);
@@ -40,7 +40,7 @@ export function crudReducer(state, action) {
       };
     }
     case NO_DATA:
-      return crudInitialState;
+      return initialState;
     default:
       return state;
   }
